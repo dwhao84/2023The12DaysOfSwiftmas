@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D340F2062B26050C008A4DFF /* ChristmasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D340F2052B26050C008A4DFF /* ChristmasViewController.swift */; };
 		D3A6AFF72B249523009BD98D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6AFF62B249523009BD98D /* AppDelegate.swift */; };
 		D3A6AFF92B249523009BD98D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6AFF82B249523009BD98D /* SceneDelegate.swift */; };
-		D3A6AFFB2B249523009BD98D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6AFFA2B249523009BD98D /* ViewController.swift */; };
 		D3A6AFFE2B249523009BD98D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A6AFFC2B249523009BD98D /* Main.storyboard */; };
 		D3A6B0002B24952D009BD98D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A6AFFF2B24952D009BD98D /* Assets.xcassets */; };
 		D3A6B0032B24952D009BD98D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A6B0012B24952D009BD98D /* LaunchScreen.storyboard */; };
 		D3A6B00E2B24952E009BD98D /* _023The12DaysOfSwiftmasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B00D2B24952E009BD98D /* _023The12DaysOfSwiftmasTests.swift */; };
 		D3A6B0182B24952E009BD98D /* _023The12DaysOfSwiftmasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B0172B24952E009BD98D /* _023The12DaysOfSwiftmasUITests.swift */; };
 		D3A6B01A2B24952E009BD98D /* _023The12DaysOfSwiftmasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6B0192B24952E009BD98D /* _023The12DaysOfSwiftmasUITestsLaunchTests.swift */; };
+		D3A6B0292B24CE56009BD98D /* enchanted-chimes-177906.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3A6B0282B24CE56009BD98D /* enchanted-chimes-177906.mp3 */; };
+		D3A6B02B2B24CE5B009BD98D /* joyful-jingle-173919.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3A6B02A2B24CE5B009BD98D /* joyful-jingle-173919.mp3 */; };
+		D3A6B02D2B24CE7C009BD98D /* magic-christmas_medium-177545.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3A6B02C2B24CE7C009BD98D /* magic-christmas_medium-177545.mp3 */; };
+		D3A6B02F2B24CE97009BD98D /* silent-night_medium-1-177552.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3A6B02E2B24CE97009BD98D /* silent-night_medium-1-177552.mp3 */; };
+		D3A6B0312B24CED9009BD98D /* joyful-bells-180226.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3A6B0302B24CED9009BD98D /* joyful-bells-180226.mp3 */; };
+		D3A6B0362B25F811009BD98D /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = D3A6B0342B25F811009BD98D /* MyParticle.sks */; };
+		D3A6B0372B25F811009BD98D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A6B0352B25F811009BD98D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,12 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D340F2052B26050C008A4DFF /* ChristmasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChristmasViewController.swift; sourceTree = "<group>"; };
 		D3A6AFF32B249523009BD98D /* 2023The12DaysOfSwiftmas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2023The12DaysOfSwiftmas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A6AFF62B249523009BD98D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3A6AFF82B249523009BD98D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D3A6AFFA2B249523009BD98D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D3A6AFFD2B249523009BD98D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D3A6AFFF2B24952D009BD98D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3A6AFFF2B24952D009BD98D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		D3A6B0022B24952D009BD98D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3A6B0042B24952D009BD98D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3A6B0092B24952E009BD98D /* 2023The12DaysOfSwiftmasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 2023The12DaysOfSwiftmasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +56,13 @@
 		D3A6B0132B24952E009BD98D /* 2023The12DaysOfSwiftmasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 2023The12DaysOfSwiftmasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A6B0172B24952E009BD98D /* _023The12DaysOfSwiftmasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _023The12DaysOfSwiftmasUITests.swift; sourceTree = "<group>"; };
 		D3A6B0192B24952E009BD98D /* _023The12DaysOfSwiftmasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _023The12DaysOfSwiftmasUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D3A6B0282B24CE56009BD98D /* enchanted-chimes-177906.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "enchanted-chimes-177906.mp3"; sourceTree = "<group>"; };
+		D3A6B02A2B24CE5B009BD98D /* joyful-jingle-173919.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "joyful-jingle-173919.mp3"; sourceTree = "<group>"; };
+		D3A6B02C2B24CE7C009BD98D /* magic-christmas_medium-177545.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "magic-christmas_medium-177545.mp3"; sourceTree = "<group>"; };
+		D3A6B02E2B24CE97009BD98D /* silent-night_medium-1-177552.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "silent-night_medium-1-177552.mp3"; sourceTree = "<group>"; };
+		D3A6B0302B24CED9009BD98D /* joyful-bells-180226.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "joyful-bells-180226.mp3"; sourceTree = "<group>"; };
+		D3A6B0342B25F811009BD98D /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
+		D3A6B0352B25F811009BD98D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +90,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D340F2072B26054C008A4DFF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D340F2052B26050C008A4DFF /* ChristmasViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D340F2082B260556008A4DFF /* Particle+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D3A6B0342B25F811009BD98D /* MyParticle.sks */,
+			);
+			path = "Particle+Extension";
+			sourceTree = "<group>";
+		};
+		D340F2092B26057E008A4DFF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3A6AFF82B249523009BD98D /* SceneDelegate.swift */,
+				D3A6AFFF2B24952D009BD98D /* Assets.xcassets */,
+				D3A6AFF62B249523009BD98D /* AppDelegate.swift */,
+				D3A6B0352B25F811009BD98D /* Assets.xcassets */,
+				D3A6B0012B24952D009BD98D /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D3A6AFEA2B249523009BD98D = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +141,11 @@
 		D3A6AFF52B249523009BD98D /* 2023The12DaysOfSwiftmas */ = {
 			isa = PBXGroup;
 			children = (
-				D3A6AFF62B249523009BD98D /* AppDelegate.swift */,
-				D3A6AFF82B249523009BD98D /* SceneDelegate.swift */,
-				D3A6AFFA2B249523009BD98D /* ViewController.swift */,
+				D340F2082B260556008A4DFF /* Particle+Extension */,
+				D340F2092B26057E008A4DFF /* Supporting Files */,
+				D3A6B0272B24CE32009BD98D /* NoCopyright_X'mas Music */,
 				D3A6AFFC2B249523009BD98D /* Main.storyboard */,
-				D3A6AFFF2B24952D009BD98D /* Assets.xcassets */,
-				D3A6B0012B24952D009BD98D /* LaunchScreen.storyboard */,
+				D340F2072B26054C008A4DFF /* ViewController */,
 				D3A6B0042B24952D009BD98D /* Info.plist */,
 			);
 			path = 2023The12DaysOfSwiftmas;
@@ -125,6 +166,18 @@
 				D3A6B0192B24952E009BD98D /* _023The12DaysOfSwiftmasUITestsLaunchTests.swift */,
 			);
 			path = 2023The12DaysOfSwiftmasUITests;
+			sourceTree = "<group>";
+		};
+		D3A6B0272B24CE32009BD98D /* NoCopyright_X'mas Music */ = {
+			isa = PBXGroup;
+			children = (
+				D3A6B02A2B24CE5B009BD98D /* joyful-jingle-173919.mp3 */,
+				D3A6B02C2B24CE7C009BD98D /* magic-christmas_medium-177545.mp3 */,
+				D3A6B02E2B24CE97009BD98D /* silent-night_medium-1-177552.mp3 */,
+				D3A6B0282B24CE56009BD98D /* enchanted-chimes-177906.mp3 */,
+				D3A6B0302B24CED9009BD98D /* joyful-bells-180226.mp3 */,
+			);
+			path = "NoCopyright_X'mas Music";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +284,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3A6B02F2B24CE97009BD98D /* silent-night_medium-1-177552.mp3 in Resources */,
+				D3A6B0292B24CE56009BD98D /* enchanted-chimes-177906.mp3 in Resources */,
 				D3A6B0032B24952D009BD98D /* LaunchScreen.storyboard in Resources */,
 				D3A6B0002B24952D009BD98D /* Assets.xcassets in Resources */,
+				D3A6B0372B25F811009BD98D /* Assets.xcassets in Resources */,
+				D3A6B0362B25F811009BD98D /* MyParticle.sks in Resources */,
+				D3A6B02D2B24CE7C009BD98D /* magic-christmas_medium-177545.mp3 in Resources */,
+				D3A6B0312B24CED9009BD98D /* joyful-bells-180226.mp3 in Resources */,
 				D3A6AFFE2B249523009BD98D /* Main.storyboard in Resources */,
+				D3A6B02B2B24CE5B009BD98D /* joyful-jingle-173919.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +318,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3A6AFFB2B249523009BD98D /* ViewController.swift in Sources */,
 				D3A6AFF72B249523009BD98D /* AppDelegate.swift in Sources */,
+				D340F2062B26050C008A4DFF /* ChristmasViewController.swift in Sources */,
 				D3A6AFF92B249523009BD98D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,8 @@ import AVFoundation
 
 class ChristmasViewController: UIViewController {
 
+    let speakerButton = UIButton(type: .system)
+    var configuration = UIButton.Configuration.filled()
 
     let gradientView = UIView()
 
@@ -19,16 +21,39 @@ class ChristmasViewController: UIViewController {
     var dateTextField:  UITextField  = UITextField()
     var secondTextField: UITextField = UITextField()
 
-    var player: AVPlayer?
+    var player: AVPlayer = AVPlayer()
+    var playerItem: AVPlayerItem?
+    var isPlayingMusic: Bool = false
+
+    var countButtonCount: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureYearTextField()
         showSnowflakeWithGradientBackgroundColor()
-
+        configureSpeakerButton()
+        playBackgroundMusic()
     }
 
+    func configureSpeakerButton() {
+        var configuration = UIButton.Configuration.filled()
+        configuration.image = UIImage(systemName: "speaker.wave.3.fill")
+        configuration.preferredSymbolConfigurationForImage = .init(pointSize: 20)
+        configuration.cornerStyle = .large
+        speakerButton.configuration = configuration
+        speakerButton.tintColor = UIColor(red: 38/255, green: 50/255, blue: 80/255, alpha: 1)
+        speakerButton.addTarget(self, action: #selector(playingMusic), for: .touchUpInside)
+        view.addSubview(speakerButton)
+
+        speakerButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            speakerButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
+            speakerButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            speakerButton.widthAnchor.constraint(equalToConstant: 50),
+            speakerButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
 
     func configureYearTextField () {
         yearTextField.frame = CGRect(x: 50, y: 100, width: 60, height: 100)
@@ -80,4 +105,29 @@ class ChristmasViewController: UIViewController {
         skView.presentScene(scene)
     }
 
+    func playBackgroundMusic () {
+        isPlayingMusic = true
+        guard let fileURL = Bundle.main.url(forResource: "joyful-jingle-173919", withExtension: "mp3") else { print("Can't find the Music resource")
+            return }
+        playerItem = AVPlayerItem(url: fileURL)
+        player.replaceCurrentItem(with: playerItem)
+        player.play()
+    }
+
+    @objc func playingMusic () {
+        if countButtonCount % 2 == 0 {
+            speakerButton.setImage(UIImage(systemName: "speaker.wave.3"), for: .normal)
+            countButtonCount += 1
+            player.pause()
+            print("Stop playing")
+            print(countButtonCount)
+        } else {
+            speakerButton.setImage(UIImage(systemName: "speaker.wave.3.fill"), for: .normal)
+            countButtonCount += 1
+            playBackgroundMusic()
+            print("Playing Music")
+            print(countButtonCount)
+        }
+    }
 }
+
