@@ -27,6 +27,22 @@ class ChristmasViewController: UIViewController {
 
     var countButtonCount: Int = 0
 
+    let imageView: UIImageView = UIImageView()
+
+    static let songOne:   String  = "joyful-jingle-173919"
+    static let songTwo:   String  = "magic-christmas_medium-177545"
+    static let songThree: String  = "silent-night_medium-1-177552"
+    static let songFour:  String  = "enchanted-chimes-177906"
+    static let songFive:  String  = "joyful-bells-180226"
+
+    let items: [String] = [
+        ChristmasViewController.songOne,
+        ChristmasViewController.songTwo,
+        ChristmasViewController.songThree,
+        ChristmasViewController.songFour,
+        ChristmasViewController.songFive
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,6 +50,26 @@ class ChristmasViewController: UIViewController {
         showSnowflakeWithGradientBackgroundColor()
         configureSpeakerButton()
         playBackgroundMusic()
+        configureImageView()
+    }
+
+    func configureImageView () {
+        let aspectRatio: CGFloat = 4 / 3
+
+        let santaClaus = UIImage.animatedImageNamed("SantaClaus_", duration: 5.5)
+        imageView.image = santaClaus
+        imageView.contentMode = .scaleToFill
+        view.addSubview(imageView)
+
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: aspectRatio)
+        ])
+
     }
 
     func configureSpeakerButton() {
@@ -42,7 +78,7 @@ class ChristmasViewController: UIViewController {
         configuration.preferredSymbolConfigurationForImage = .init(pointSize: 20)
         configuration.cornerStyle = .large
         speakerButton.configuration = configuration
-        speakerButton.tintColor = UIColor(red: 38/255, green: 50/255, blue: 80/255, alpha: 1)
+        speakerButton.tintColor = UIColor(red: 38/255, green: 50/255, blue: 80/255, alpha: 0.7)
         speakerButton.addTarget(self, action: #selector(playingMusic), for: .touchUpInside)
         view.addSubview(speakerButton)
 
@@ -78,11 +114,9 @@ class ChristmasViewController: UIViewController {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
         gradientLayer.colors = [
-            UIColor(red: 1/255, green: 21/255, blue: 45/255, alpha: 1).cgColor,
-            UIColor(red: 1/255, green: 35/255, blue: 72/255, alpha: 1).cgColor,
-            UIColor(red: 1/255, green: 40/255, blue: 83/255, alpha: 1).cgColor,
-            UIColor(red: 1/255, green: 35/255, blue: 72/255, alpha: 1).cgColor,
-            UIColor(red: 1/255, green: 21/255, blue: 45/255, alpha: 1).cgColor
+            UIColor(red: 23/255, green: 41/255, blue: 56/255, alpha: 1).cgColor,
+            UIColor(red: 3/255, green: 14/255, blue: 27/255, alpha: 1).cgColor,
+            UIColor(red: 3/255, green: 14/255, blue: 27/255, alpha: 1).cgColor
         ]
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.0)
         gradientLayer.endPoint = CGPoint(x: 0.5, y: 1.0)
@@ -107,7 +141,7 @@ class ChristmasViewController: UIViewController {
 
     func playBackgroundMusic () {
         isPlayingMusic = true
-        guard let fileURL = Bundle.main.url(forResource: "joyful-jingle-173919", withExtension: "mp3") else { print("Can't find the Music resource")
+        guard let fileURL = Bundle.main.url(forResource: items[0], withExtension: "mp3") else { print("Can't find the Music resource")
             return }
         playerItem = AVPlayerItem(url: fileURL)
         player.replaceCurrentItem(with: playerItem)
