@@ -8,9 +8,11 @@
 import UIKit
 import SpriteKit
 import AVFoundation
+import Foundation
 
 class ChristmasViewController: UIViewController {
 
+    // MARK: - speakerButton
     let speakerButton = UIButton(type: .system)
     var configuration = UIButton.Configuration.filled()
 
@@ -21,13 +23,13 @@ class ChristmasViewController: UIViewController {
     var dateTextField:  UITextField  = UITextField()
     var secondTextField: UITextField = UITextField()
 
-    var player: AVPlayer = AVPlayer()
-    var playerItem: AVPlayerItem?
-    var isPlayingMusic: Bool = false
-
-    var countButtonCount: Int = 0
-
     let imageView: UIImageView = UIImageView()
+
+    // MARK: - Music player:
+    var player: AVPlayer = AVPlayer()
+    var playerItem: AVPlayerItem!
+    var isPlayingMusic: Bool = false
+    var countButtonCount: Int = 0
 
     static let songOne:   String  = "joyful-jingle-173919"
     static let songTwo:   String  = "magic-christmas_medium-177545"
@@ -51,8 +53,40 @@ class ChristmasViewController: UIViewController {
         configureSpeakerButton()
         playBackgroundMusic()
         configureImageView()
+        setupTime()
     }
 
+    func setupTime() {
+        let start: Date = Date()
+        let calendar: Calendar = Calendar.current
+
+        var components = DateComponents()
+        components.year = 2023
+        components.month = 12
+        components.day = 25
+        components.hour = 0
+        components.minute = 0
+
+        guard let end = calendar.date(from: components) else {
+            fatalError("Unable to create the end date.")
+        }
+
+        let interval = end.timeIntervalSince(start)
+        let formattedTime = formatTimeInterval(interval)
+
+        print("Time Interval: \(formattedTime)")
+    }
+
+    func formatTimeInterval(_ interval: TimeInterval) -> String {
+        let days    = Int(interval) / 86400 // There are 86400 seconds in a day
+        let hours   = (Int(interval) % 86400) / 3600 // Remaining hours
+        let minutes = (Int(interval) % 3600) / 60 // Remaining minutes
+        let seconds = (Int(interval) % 3600) / 60 % 60
+
+        return "\(days) days, \(hours) hours, \(minutes) minutes, \(seconds) secs"
+    }
+
+    // imageView
     func configureImageView () {
         let aspectRatio: CGFloat = 4 / 3
 
@@ -72,6 +106,7 @@ class ChristmasViewController: UIViewController {
 
     }
 
+    // speakerButton
     func configureSpeakerButton() {
         var configuration = UIButton.Configuration.filled()
         configuration.image = UIImage(systemName: "speaker.wave.3.fill")
@@ -91,6 +126,7 @@ class ChristmasViewController: UIViewController {
         ])
     }
 
+    // yearTextField
     func configureYearTextField () {
         yearTextField.frame = CGRect(x: 50, y: 100, width: 60, height: 100)
 
