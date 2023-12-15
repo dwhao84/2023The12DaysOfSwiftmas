@@ -9,7 +9,7 @@
   
 #### Here is the Article Links below:
 
-> Note: Basically all the detail information will be stored in Medium.
+> Note: Basically all the detail information will be show in Medium.
 
 * https://medium.com/彼得潘的-swift-ios-app-開發教室/hw-39-qrcode-scanner-a6941ca3ec2b
 
