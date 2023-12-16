@@ -13,5 +13,5 @@
 
 > Note: Basically all the detail information will be show in Medium.
 
-* [https://medium.com/彼得潘的-swift-ios-app-開發教室/hw-39-qrcode-scanner-a6941ca3ec2b](https://medium.com/p/a1d834ba8626)https://medium.com/p/a1d834ba8626
+* https://medium.com/p/a1d834ba8626
 
